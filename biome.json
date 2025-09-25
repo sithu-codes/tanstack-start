@@ -9,7 +9,7 @@
     "ignoreUnknown": false,
     "includes": [
       "**",
-      "!routeTree.gen.ts",
+      "!**/routeTree.gen.ts",
       "!.drizzle",
       "!dist",
       "!build",
@@ -39,6 +39,14 @@
       "trailingCommas": "none"
     }
   },
+  "css": {
+    "linter": {
+      "enabled": false
+    },
+    "assist": {
+      "enabled": true
+    }
+  },
   "json": {
     "formatter": {
       "enabled": true,
@@ -54,15 +62,19 @@
           "options": {
             "groups": [
               [":NODE:"],
+
               ":BLANK_LINE:",
+
               ["react", "react/**"],
-              ["hono", "hono/**"],
-              ["drizzle-orm", "drizzle-orm/**"],
               ["@tanstack/react-router", "@tanstack/react-router/**"],
               ["@tanstack", "@tanstack/**"],
+
               ":BLANK_LINE:",
+
               ":PACKAGE:",
+
               ":BLANK_LINE:",
+
               ["types"],
               ["@", "@/**"],
               ["@/shared", "@/shared/**"],
@@ -70,7 +82,9 @@
               ["@/hooks", "@/hooks/**"],
               ["@/components/ui", "@/components/ui/**"],
               ["@/components", "@/components/**"],
+
               ":BLANK_LINE:",
+
               ["../../../**"],
               ["../../**"],
               ["../**"],
