@@ -1,0 +1,84 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**",
+      "!routeTree.gen.ts",
+      "!.drizzle",
+      "!dist",
+      "!build",
+      "!.husky",
+      "!node_modules"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentWidth": 2,
+    "indentStyle": "space"
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "always",
+      "bracketSameLine": true,
+      "bracketSpacing": true,
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "semicolons": "always",
+      "trailingCommas": "none"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "trailingCommas": "none"
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              [":NODE:"],
+              ":BLANK_LINE:",
+              ["react", "react/**"],
+              ["hono", "hono/**"],
+              ["drizzle-orm", "drizzle-orm/**"],
+              ["@tanstack/react-router", "@tanstack/react-router/**"],
+              ["@tanstack", "@tanstack/**"],
+              ":BLANK_LINE:",
+              ":PACKAGE:",
+              ":BLANK_LINE:",
+              ["types"],
+              ["@", "@/**"],
+              ["@/shared", "@/shared/**"],
+              ["@/lib", "@/lib/**"],
+              ["@/hooks", "@/hooks/**"],
+              ["@/components/ui", "@/components/ui/**"],
+              ["@/components", "@/components/**"],
+              ":BLANK_LINE:",
+              ["../../../**"],
+              ["../../**"],
+              ["../**"],
+              ["./**"]
+            ]
+          }
+        }
+      }
+    }
+  }
+}
